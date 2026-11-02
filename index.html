@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Low Tide Deals</title>
+<meta name="description" content="Amazon deals at their lowest price. Every one checked against its price history before we post it.">
+<meta property="og:title" content="Low Tide Deals">
+<meta property="og:description" content="Amazon deals at their lowest price. Every one checked against its price history before we post it.">
+<meta property="og:image" content="https://lowtidedeals.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#06192b; --bg2:#0b2f4d; --card:#0d2a44; --card-hi:#11344f; --line:rgba(239,252,249,.1);
+  --ink:#effcf9; --muted:#9fb9c6; --teal:#2ec4b6; --coral:#ff7a55; --coral-deep:#ff6a4d;
+}
+* { box-sizing:border-box; }
+html { background:var(--bg); }
+body { margin:0; color:var(--ink); font:16px/1.5 Outfit, "Segoe UI", system-ui, sans-serif;
+       background:linear-gradient(180deg, var(--bg) 0, var(--bg2) 420px, var(--bg) 900px); min-height:100vh; }
+.wrap { max-width:880px; margin:0 auto; padding:0 16px; }
+
+/* hero with the sunset at low tide */
+.hero { position:relative; overflow:hidden; padding:28px 0 0; }
+.top { display:flex; align-items:center; gap:12px; }
+.top img { width:44px; height:44px; border-radius:50%; box-shadow:0 0 0 2px rgba(239,252,249,.12); }
+.top b { font-weight:700; letter-spacing:.22em; font-size:14px; color:var(--teal); }
+h1 { margin:34px 0 6px; font-weight:800; font-size:clamp(38px, 8vw, 64px); line-height:1; letter-spacing:-.02em; }
+h1 span { color:var(--coral); }
+.lede { margin:0; color:var(--muted); font-size:18px; max-width:520px; }
+.scene { display:block; width:100%; height:170px; margin-top:-10px; }
+
+.bar { position:sticky; top:0; z-index:2; background:rgba(6,25,43,.88); backdrop-filter:blur(10px);
+       border-bottom:1px solid var(--line); padding:12px 0; }
+.bar .wrap { display:flex; gap:12px; align-items:center; }
+input[type=search] { flex:1; min-width:0; padding:12px 16px; font:inherit; color:var(--ink); background:var(--card);
+       border:1px solid var(--line); border-radius:12px; outline:none; }
+input[type=search]:focus { border-color:var(--teal); }
+.count { color:var(--muted); font-size:14px; white-space:nowrap; }
+
+.disc { margin:18px 0 8px; font-size:13px; color:var(--muted); }
+.grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 400px), 1fr)); gap:14px; margin:14px 0 40px; }
+
+.deal { position:relative; display:flex; flex-direction:column; gap:12px; padding:18px; border-radius:16px;
+        background:linear-gradient(180deg, var(--card-hi), var(--card)); border:1px solid var(--line);
+        transition:transform .15s ease, border-color .15s ease; }
+.deal:hover { transform:translateY(-2px); border-color:rgba(46,196,182,.45); }
+.head { display:flex; align-items:center; gap:10px; }
+.pct { font-weight:800; font-size:28px; line-height:1; color:var(--coral); letter-spacing:-.02em; }
+.pct small { font-size:15px; font-weight:700; color:var(--ink); margin-left:3px; }
+.new { font-size:11px; font-weight:700; letter-spacing:.12em; color:var(--bg); background:var(--teal); padding:3px 8px; border-radius:999px; }
+.when { margin-left:auto; font-size:13px; color:var(--muted); }
+.deal h2 { margin:0; font-size:18px; font-weight:600; line-height:1.3; overflow-wrap:anywhere; }
+.why { margin:0; font-size:14px; color:var(--teal); }
+a.btn { margin-top:auto; display:flex; justify-content:center; align-items:center; gap:8px; text-decoration:none;
+        background:var(--coral); color:#fff; font-weight:700; padding:12px 16px; border-radius:12px; }
+a.btn:hover { background:var(--coral-deep); }
+.empty { color:var(--muted); padding:30px 0; }
+
+footer { border-top:1px solid var(--line); padding:24px 0 48px; color:var(--muted); font-size:14px; }
+footer a { color:var(--ink); }
+.socials { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:10px; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top"><img src="logo.svg" alt=""><b>LOW TIDE DEALS</b></div>
+    <h1>Prices at <span>low tide.</span></h1>
+    <p class="lede">Amazon deals at their lowest price. Every one checked against its price history before we post it.</p>
+  </div>
+  <svg class="scene" viewBox="0 0 1200 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(700 110) scale(420 105)">
+        <stop offset="0" stop-color="#ff8a5c" stop-opacity=".5"/><stop offset="1" stop-color="#ff8a5c" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc58f"/><stop offset="1" stop-color="#ff6a4d"/></linearGradient>
+      <clipPath id="c"><rect width="1200" height="110"/></clipPath>
+    </defs>
+    <ellipse cx="700" cy="110" rx="420" ry="105" fill="url(#g)"/>
+    <circle cx="700" cy="110" r="52" fill="url(#s)" clip-path="url(#c)"/>
+    <rect y="110" width="1200" height="60" fill="#06192b"/>
+    <rect y="109" width="1200" height="2" fill="#ffb07f" opacity=".5"/>
+    <g fill="none" stroke="#2ec4b6" stroke-linecap="round">
+      <path d="M-20 138 q 40 -16 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0" stroke-width="3" opacity=".45"/>
+      <path d="M-40 160 q 55 -20 110 0 t 110 0 t 110 0 t 110 0 t 110 0 t 110 0 t 110 0 t 110 0 t 110 0 t 110 0 t 110 0 t 110 0" stroke-width="4" opacity=".8"/>
+    </g>
+  </svg>
+</header>
+
+<div class="bar"><div class="wrap">
+  <input id="q" type="search" placeholder="Search today's deals…" aria-label="Search deals">
+  <span class="count" id="count">0 deals</span>
+</div></div>
+
+<main class="wrap">
+  <p class="disc">As an Amazon Associate I earn from qualifying purchases. Prices change often, so check the current price on Amazon before you buy.</p>
+  <div class="grid" id="grid">
+    <p class="empty">New deals are on the way. Check back soon.</p>
+  </div>
+</main>
+
+<footer><div class="wrap">
+  <div class="socials"><a href="https://x.com/LowTideDeals" rel="noopener">X @LowTideDeals</a><a href="https://instagram.com/low.tidedeals" rel="noopener">Instagram @low.tidedeals</a></div>
+  Updated <span class="t" data-t="2026-11-02T19:35:07+00:00">2026-11-02T19:35:07+00:00</span>. Every discount is checked against the product's price history before it's posted.
+</div></footer>
+
+<script>
+const ago = d => { const m = Math.round((Date.now() - d) / 60000);
+  return m < 60 ? `${Math.max(m, 1)}m ago` : m < 1440 ? `${Math.round(m / 60)}h ago` : `${Math.round(m / 1440)}d ago`; };
+document.querySelectorAll('.when').forEach(e => { const d = new Date(e.dataset.t); if (isNaN(d)) return;
+  e.textContent = ago(d);
+  if (Date.now() - d < 864e5) e.parentElement.querySelector('.new')?.removeAttribute('hidden'); });
+document.querySelectorAll('.t').forEach(e => { const d = new Date(e.dataset.t); if (!isNaN(d)) e.textContent = d.toLocaleString(); });
+const deals = [...document.querySelectorAll('.deal')], count = document.getElementById('count');
+document.getElementById('q').addEventListener('input', e => {
+  const q = e.target.value.toLowerCase().trim(); let n = 0;
+  deals.forEach(c => { const hit = c.textContent.toLowerCase().includes(q); c.hidden = !hit; n += hit; });
+  count.textContent = `${n} deal${n === 1 ? '' : 's'}`;
+});
+</script>
+</body>
+</html>
